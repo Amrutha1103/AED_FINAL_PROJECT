@@ -8,7 +8,15 @@ package Schema.Organization;
  *
  * @author amruthaedara
  */
-public class SupplierOrganization {
+public class SupplierOrganization extends Organization{
+
+public SupplierOrganization(){
+super(Organization.OrganizationType.Supplier.getValue());
+     }   
+
+
+    
+    
     
     
     
