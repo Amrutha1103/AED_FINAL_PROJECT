@@ -4,10 +4,20 @@
  */
 package Schema.Doctor;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author amruthaedara
  */
 public class PrescriptionList {
+    
+    
+    private ArrayList<DoctorPrescription> prescriptionlist;
+    public ArrayList<DoctorPrescription> getPrescriptionlist() {
+        return prescriptionlist;
+    }
+    
+    
     
 }
