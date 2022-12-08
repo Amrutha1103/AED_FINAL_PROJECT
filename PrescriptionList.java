@@ -18,6 +18,17 @@ public class PrescriptionList {
         return prescriptionlist;
     }
     
+    public void setPrescriptionlist(ArrayList<DoctorPrescription> prescriptionlist) {
+        this.prescriptionlist = prescriptionlist;
+    }
+    
+    
+    public DoctorPrescription addDoctorPrescription(){
+        DoctorPrescription prescription = new DoctorPrescription();
+        prescriptionlist.add(prescription);
+        return prescription;
+    }
+    
     
     
 }
