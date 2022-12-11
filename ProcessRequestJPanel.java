@@ -199,6 +199,8 @@ JOptionPane.showMessageDialog(this, "New notification from Transport Department"
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
+        TransportationWorkAreaJPanel twjp = (TransportationWorkAreaJPanel) component;
+        twjp.populateTable();
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
