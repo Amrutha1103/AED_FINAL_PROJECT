@@ -270,9 +270,18 @@ private void populateTable() {
 DefaultTableModel model = (DefaultTableModel) tblEnterprise.getModel();
 model.setRowCount(0);
 for(Network ntw : system.getNetworkList()){
+    
     for(Enterprise ent : ntw.getEnterpriseDirectory().getEnterpriseList()){
+        
         for(UserAccount ua : ent.getUserAccountDirectory().getUserAccountList()){
+            
+            
             Object[] row = new Object[3];
+            
+            row[0] = ent.getName();
+            row[1]= ntw.getName();
+            row[2] = ua.getUsername();
+            model.addRow(row);
             
         }
     }
