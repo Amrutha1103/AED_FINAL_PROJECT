@@ -43,7 +43,7 @@ public class PharmaWorkAreaJPanel extends javax.swing.JPanel {
         this.ent=enterprise;
         this.pil= pil;
        // this.org=(Phar)
-        this.pharmorg=(PharmacyOrganization) ;
+        this.pharmorg=(PharmacyOrganization) org ;
         this.network=network;
         refreshTable();
         populateDoctorTable();
