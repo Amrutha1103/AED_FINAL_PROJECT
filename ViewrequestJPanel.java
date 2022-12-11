@@ -42,7 +42,22 @@ private JPanel userProcessContainer;
 public void populateTable(){
 DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
 model.setRowCount(0);
-model.setRowCount(0);
+
+        for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
+            Object[] row = new Object[5];
+            row[0] = ((SupplierWorkRequest) request).getMedicationName();
+            row[1] = ((SupplierWorkRequest) request).getQuantity();
+            row[2] = request.getReceiver().getUsername();
+            String result = ((SupplierWorkRequest) request).getStatus();
+            row[3] = result == null ? "Waiting" : result;
+            if(((SupplierWorkRequest) request).getDeliveryTime()==null){
+                row[4]="Details yet to be updated by supplier";
+            }
+            else{
+            row[4]  = "Expected delivery time " +((SupplierWorkRequest) request).getDeliveryTime();
+                    }
+            model.addRow(row);
+        }
 
 }
     
