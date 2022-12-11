@@ -33,6 +33,7 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
         this.ua = userAccount;
         this.system = business;
         this.suppOrg = (SupplierOrganization)organization ;
+        populateTable();
         
     }
 
