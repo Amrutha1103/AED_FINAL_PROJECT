@@ -149,8 +149,14 @@ populateNetworkTable();// TODO add your handling code here:
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void populateNetworkTable() {
+        
        DefaultTableModel model = (DefaultTableModel) nameTbl.getModel();
        model.setRowCount(0);
+       
+        for(Network network : system.getNetworkList()){
+           Object[] row = new Object[1];
+           row[0] = network.getName();
+           model.addRow(row);
       
            
        }
