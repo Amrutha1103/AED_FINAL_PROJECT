@@ -24,6 +24,7 @@ public class ProcessSupplierWorkRequestJPanel extends javax.swing.JPanel {
     public ProcessSupplierWorkRequestJPanel(JPanel upContainer,SupplierWorkRequest suppWorkReq) {
         initComponents();
         this.upContainer=upContainer;
+        this.suppWorkReq=suppWorkReq;
         
     }
 
